@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shooting Game in Virtual Reality</title>
-    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>   
-    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <title>Paintball</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>
+  
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-
-    <!--Local Scripts-->
+  
     <script src="./shoot.js"></script>
-
+    <script src="./playerMovement.js"></script>
+  
   </head>
   <body>
     <a-scene id="scene">
@@ -58,6 +61,9 @@
 
       <!--Bullets-->
       <a-entity bullets></a-entity>
+
+      <!--Game Objects-->
+      <a-entity targets></a-entity>
 
       <!--Ground-->
       <a-plane
